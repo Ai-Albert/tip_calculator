@@ -21,6 +21,14 @@ class SettingsViewController: UIViewController {
         tipOne.text = defaults.string(forKey: "tip1")
         tipTwo.text = defaults.string(forKey: "tip2")
         tipThree.text = defaults.string(forKey: "tip3")
+        
+        // Setting keyboard types
+        tipOne.keyboardType = UIKeyboardType.decimalPad
+        tipTwo.keyboardType = UIKeyboardType.decimalPad
+        tipThree.keyboardType = UIKeyboardType.decimalPad
+        
+        // Setting first tip box as default
+        tipOne.becomeFirstResponder()
     }
     
     override func viewWillDisappear(_ animated: Bool) {

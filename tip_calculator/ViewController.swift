@@ -49,6 +49,11 @@ class ViewController: UIViewController {
             forSegmentAt: 2
         )
         
+        // Bill amount keyboard pop up
+        billAmountTextField.keyboardType = UIKeyboardType.decimalPad
+        billAmountTextField.becomeFirstResponder()
+        
+        // Automatically calculates tip with updated tip percentages
         calculateTip(1)
     }
     
@@ -75,6 +80,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func onBillChanged(_ sender: Any) {
+        // Automatically calculates tip as bill amount is changed
         calculateTip(sender)
     }
 }
